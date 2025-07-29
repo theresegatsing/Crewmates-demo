@@ -40,3 +40,22 @@ form.addEventListener('submit', async (e) => {
     window.location.href = "summary.html";
   }
 });
+
+// Handle delete 
+
+document.getElementById("delete-btn").addEventListener("click", async () => {
+  const confirmDelete = confirm("Are you sure you want to delete this crewmate?");
+  if (!confirmDelete) return;
+
+  const { error: deleteError } = await supabase
+    .from("crewmates")
+    .delete()
+    .eq("id", id);
+
+  if (deleteError) {
+    alert("Delete failed: " + deleteError.message);
+  } else {
+    alert("Crewmate deleted!");
+    window.location.href = "summary.html";
+  }
+});
