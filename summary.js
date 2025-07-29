@@ -15,7 +15,7 @@ if (error) {
 
     // Add crewmate info
     card.innerHTML = `
-      <h3>${c.name}</h3>
+      <h3><a href="detail.html?id=${c.id}">${c.name}</a></h3>
       <p>Role: ${c.role}</p>
       <p>Color: ${c.color}</p>
       <a href="detail.html?id=${c.id}">View Details</a>
