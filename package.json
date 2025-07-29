@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "serve ."
   },
   "repository": {
@@ -14,9 +13,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/theresegatsing/Crewmates/issues"
   },
-  "homepage": "https://github.com/theresegatsing/Crewmates#readme"
+  "homepage": "https://github.com/theresegatsing/Crewmates#readme",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
 }
